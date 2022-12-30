@@ -1,0 +1,54 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class ArrayDque { 
+	   public static void main(String[] args) {  
+	   //Creating Deque and adding elements  
+	   Deque deque = new ArrayDeque();  
+	   deque.add("Ravi");    
+	   deque.add("Vijay");     
+	   deque.add(300);
+	   deque.addFirst("akshay");
+	   for (Object str : deque) {  
+	   System.out.println(str);  
+	   }  
+	   deque.poll();
+	  
+	   deque.addLast("patil");
+	   for (Object str : deque) {  
+		   System.out.println(str);  
+		   }  }  
+	} 
+
+==============================================================================================================================================================
+ 2)import java.util.ArrayDeque;
+import java.util.Iterator;
+
+class Student{
+	int RollNo;
+	String name,Area,city;
+	public Student(int RollNo,String name,String Area,String city) {
+	  this.RollNo=RollNo;
+	  this.name=name;
+	  this.Area=Area;
+	  this.city=city;
+	}
+	public String toString() {
+		return  RollNo+" "+ name+" "+ Area+" " +city; 
+	}
+	}
+public class ArrayDque { 
+	   public static void main(String[] args) {  
+	    ArrayDeque<Student> ad=new ArrayDeque<Student>();
+	    Student s1=new Student(12, "Ravi", "jamner", "jalgaon");
+	    Student s2=new Student(13, "madhav", "pachora", "ahmednagar");
+	    Student s3=new Student(14, "kishan", "raver", "pune");
+	    ad.add(s1);
+	    ad.add(s2);
+	    ad.add(s3);
+	    Iterator<Student> itr=ad.iterator();
+	    while (itr.hasNext()) {
+			Student stu=itr.next();
+			System.out.println(stu);
+			}}
+}
