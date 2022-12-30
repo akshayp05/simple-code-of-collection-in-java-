@@ -1,0 +1,20 @@
+
+import java.util.Iterator;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+public class CoppyonwriteListDEmo {
+public static void main(String[] args) {
+	CopyOnWriteArrayList list=new CopyOnWriteArrayList<>();
+	list.add("raj");
+	list.add("udhhav");
+	list.add("devendra");
+	list.add("eknath");
+	
+	Iterator itr=list.iterator();
+	 while (itr.hasNext()) {
+		Object obj = itr.next();
+		System.out.println(obj);	
+       list.add("sanjay");           ......//not throw concurrent modification exception
+	}
+}
+}
