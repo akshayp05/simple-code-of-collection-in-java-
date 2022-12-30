@@ -1,0 +1,54 @@
+public class ComparableDemo implements Comparable<Object> {
+ int id;
+ String name;
+  String Address;
+	
+	public int getId() {
+	return id;
+}
+
+public void setId(int id) {
+	this.id = id;
+}
+
+public String getName() {
+	return name;
+}
+
+public void setName(String name) {
+	this.name = name;
+}
+
+public String getAddress() {
+	return Address;
+}
+
+public void setAddress(String address) {
+	Address = address;
+}
+
+	public int compareTo(Object o) {
+		 ComparableDemo cd=new  ComparableDemo ();
+		return cd.id=this.id;
+	}
+	public static void main(String[] args) {
+		 ComparableDemo cd1=new  ComparableDemo ();
+		 cd1.setId(1);
+		 cd1.setName("Hari");
+		 cd1.setAddress("jalgaon");
+		 ComparableDemo cd2=new  ComparableDemo ();
+		 cd2.setId(2);
+		 cd2.setName("Haridas");
+		 cd2.setAddress("agadgaon");
+		 Set < ComparableDemo>  set=new TreeSet<>();
+		 set.add(cd1);
+		 set.add(cd2);
+		 
+		 for ( ComparableDemo cd : set) {
+			System.out.println(cd.getId());
+			System.out.println(cd.getName());
+			System.out.println(cd.getAddress());
+		}
+	}
+
+}
