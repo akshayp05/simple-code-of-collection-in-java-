@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+class emp{
+	int id;
+	String name;
+	public emp(int id,String name) {
+		this.id=id;
+		this.name=name;
+	}
+	public String toString() {
+		return id+" "+name;
+	}
+	}
+public class ItratorDemo {
+	public static void main(String[] args) {
+		ArrayList<emp> arr=new ArrayList<emp>();
+		emp e1=new emp(1, "mech");
+		emp e2=new emp(2, "comp");
+		emp e3=new emp(3, "elec");
+		arr.add(e1);
+		arr.add(e2);
+		arr.add(e3);
+		System.out.println(arr);
+		Iterator itr=arr.iterator();
+		while (itr.hasNext()) {
+			Object obj = itr.next();
+			System.out.println(obj);
+			}
+		}
+	}
