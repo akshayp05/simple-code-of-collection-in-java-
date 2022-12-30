@@ -1,0 +1,32 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+public class LinkedListDemo {
+public static void main(String[] args) {
+	LinkedList<Integer> ld=new LinkedList<Integer>();
+	ld.add(100);
+	ld.add(200);
+	ld.add(300);
+	System.out.println("integer values:"+ld);
+	LinkedList<String> lds=new LinkedList<String>();
+	lds.add("one");
+	lds.add("two");
+	lds.add("three");
+	System.out.println("string values:"+lds);
+	LinkedList linkedlist=new LinkedList();
+	linkedlist.addAll(ld);
+	linkedlist.addAll(lds);
+	System.out.println("combine:"+linkedlist);
+	Iterator itr=linkedlist.iterator();  //....Travesal by Iterator
+	while (itr.hasNext()) {
+		Object obj =itr.next();
+		System.out.println(obj);
+		}
+	ListIterator ltr=lds.listIterator();  //......Travesal by ListIterator
+	while (ltr.hasNext()) {
+		System.out.println( ltr.next());
+		}
+	
+}
+}
