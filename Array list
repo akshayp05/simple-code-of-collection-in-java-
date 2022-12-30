@@ -23,3 +23,31 @@ public class ListDemo {
 		System.out.println(list.size());
 		}
 }
+
+==========================================================================================================================================================
+***Non-synchronized Arraylist:-
+
+import java.util.ArrayList;
+         import java.util.List;
+public class ArrayListDemo {
+   public static void main(String[] args) {
+	List al=new ArrayList();
+	al.add("hello");
+	al.add("collection");
+	al.add(100);
+	al.add('D');
+	System.out.println(al);   .........// it have initial capacity 10
+	List al1=new ArrayList(2); ......// it specify capacity manually
+	al1.add(300);
+	al1.add(40.3);
+	System.out.println(al1);
+	List al2=new ArrayList(al); ..........//adding another object of collecting in other
+	System.out.println(al2);
+	al.add(1, "Array");  ..........//add element by indexing
+	System.out.println(al);
+         al1.set(0, "king"); .........//set and replace element by index
+	System.out.println(al1);
+}
+}
+
+
