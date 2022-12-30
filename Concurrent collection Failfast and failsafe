@@ -1,0 +1,49 @@
+@Failfast:-
+ -In program one operation perform some task (exa.read) that time next operation trying to add some task(exa write) so it throw concurrentmodification exception that process called as fail fast
+Example:-
+import java.util.HashMap;
+import java.util.Iterator;
+
+public class FailFastDemo {
+	public static void main(String[] args) {
+		HashMap<String, String> hm=new HashMap<String, String>();
+		hm.put("maharastra", "mumbai");
+		hm.put("gujrat", "gandhinagar");
+		hm.put("tamilnadu", "chennai");
+
+Iterator itr=hm.keySet().iterator();
+while (itr.hasNext()) {
+	String s = (String) itr.next();
+	System.out.println("State is:"+s +"   Capital:"+hm.get(s));
+	hm.put("karnataka", "bangalore");
+	}
+	}
+	}
+..................................out put
+State is:maharastra   Capital:mumbai
+Exception in thread "main" java.util.ConcurrentModificationException
+	at java.base/java.util.HashMap$HashIterator.nextNode(HashMap.java:1597)
+	at java.base/java.util.HashMap$KeyIterator.next(HashMap.java:1620)
+	at Collections/concurrentCollection.FailFastDemo.main(FailFastDemo.java:15)
+-------------------------------------------------------------------------------------------------------
+@Failsafe:-
+-By using concurrent collection we can solve this issue called as failsafe
+example:-
+import java.util.Iterator;
+import java.util.concurrent.ConcurrentHashMap;
+
+public class FailFastDemo {
+	public static void main(String[] args) {
+		ConcurrentHashMap<String, String> hm=new ConcurrentHashMap<String, String>();
+		hm.put("maharastra", "mumbai");
+		hm.put("gujrat", "gandhinagar");
+		hm.put("tamilnadu", "chennai");
+
+Iterator<String> itr=hm.keySet().iterator();
+while (itr.hasNext()) {
+	String s = (String) itr.next();
+	System.out.println("State is:"+s +"   Capital:"+hm.get(s));
+	hm.put("karnataka", "bangalore");
+	}
+	}
+	}
