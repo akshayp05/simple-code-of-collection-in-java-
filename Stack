@@ -1,0 +1,21 @@
+Stack:-
+ -Stack is sub class of vector class 
+-stack represent LIFO (last in first out)
+-methods of stack
+  push(), pop(), peek(), search(), empty()
+
+Example:-public class StackDemo {
+public static void main(String[] args) {
+	Stack s=new Stack();
+	s.push("akshay");   ..........// push() for adding element at Top of stack
+	s.push("patil");
+	s.push(100);
+	s.push(200);
+	System.out.println(s);
+	s.pop();           ...........// pop() for removing element on top of stack
+	System.out.println(s);
+	System.out.println(s.peek());   ...............//return object from top of stack
+	System.out.println(s.search("akshay"));  ...........//return element postition from top
+	System.out.println(s.empty());  ........// it check stack is empty or not give boolean value
+}
+}
