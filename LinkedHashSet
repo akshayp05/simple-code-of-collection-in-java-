@@ -1,0 +1,24 @@
+
+import java.util.LinkedHashSet;
+
+public class LinkedHashSetDemo {
+     public static void main(String[] args) {
+		LinkedHashSet set =new LinkedHashSet();
+		set.add(100);
+		set.add(100);
+		set.add(200);
+		set.add(300);
+		System.out.println("first set is:"+set);
+		LinkedHashSet set1 =new LinkedHashSet();
+		set1.add("panvel");
+		set1.add("tahne");
+		set1.add("washi");
+		System.out.println("second set is:"+set1);
+		set1.addAll(set);
+		System.out.println("combaine is:"+set1);
+		System.out.println("size of set1 is:"+set1.size());
+		System.out.println("remove item:"+set1.remove("washi"));
+		System.out.println("size of set1 is:"+set1.size());
+		
+	}
+}
