@@ -1,0 +1,24 @@
+Set(Interface):-
+ -Set interface is availabe in java.util package
+ -The set interface extends the Collection interface
+ -Set index and insertion order not preserve
+ -set duplicates are not allow
+-SortedSet and NavigableSet are two interfaces that extend the set implementation.
+-Method is: add(), addAll(), clear(), contain(), containAll(),hashcode(), isEmpty(), remove()....etc
+
+Example:-import java.util.HashSet;
+import java.util.Set;
+
+public class SetDemo{   
+    public static void main(String[] args)   
+    {   
+        Set  s1 = new HashSet();   
+        s1.add("clover");   
+        s1.add("info");   
+        s1.add("Example");   
+        s1.add("Set"); 
+        s1.add("clover");
+        s1.add("clover");
+     System.out.println(s1);   
+    }   
+}
