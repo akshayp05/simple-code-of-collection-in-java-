@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListDemo {
+     public static void main(String[] args) {
+    	 List list=new ArrayList();
+    	 System.out.println(list.isEmpty());
+		list.add(100);
+		list.add("clover");
+		list.add('A');
+		list.add(12.33);
+                System.out.println(list.add("abc"));
+		int i=(int)list.get(0);
+		System.out.println(i);
+		System.out.println(list);
+		List l=new ArrayList();
+		l.addAll(list);
+		System.out.println(l);
+		list.remove(1);
+		System.out.println(list);
+		System.out.println(list.contains('A'));
+		System.out.println(list.hashCode());
+		System.out.println(list.size());
+		}
+}
