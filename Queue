@@ -1,0 +1,26 @@
+import java.util.PriorityQueue;
+
+public class PQDemo {
+public static void main(String[] args) {
+	PriorityQueue pq=new PriorityQueue<>();
+	pq.add(100);
+	pq.add(200);
+	pq.add(200);
+	pq.add(300);
+	pq.add(300);
+	pq.add(400);
+	System.out.println("value of int:"+pq);
+	PriorityQueue pq1=new PriorityQueue<>();
+	pq1.add('a');
+	pq1.add('b');
+	pq1.add('b');
+	pq1.add('c');
+	pq1.add('c');
+	pq1.add('d');
+	System.out.println("value of char:"+pq1);
+	System.out.println("head:"+pq.element());
+	System.out.println("head:"+pq1.peek());
+	pq.remove();
+	System.out.println(pq);
+}
+}
