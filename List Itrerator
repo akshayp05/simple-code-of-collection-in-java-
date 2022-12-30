@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
+
+class Student{
+	int id;
+	String name;
+	String Area;
+	String city;
+public Student(int id,String name,String Area,String city) {
+	this.id	=id;
+	this.name=name;
+	this.Area=Area;
+	this.city=city;
+	}
+	@Override
+	public String toString() {
+		return id+" "+name+" "+ Area+ " " + Area + city;
+	}
+	
+		}
+public class ListItratorDemo {
+	public static void main(String[] args) {
+		List l=new ArrayList();
+		 Student s1=new Student(11, "ram", "airoli", "navimumbai");
+		 Student s2=new Student(12, "sham", "washi", "mumbai");
+		 Student s3=new Student(13, "rahul", "thane", "navimumbai");
+		 l.add(s1);
+		 l.add(s2);
+		 l.add(s3);
+		ListIterator ltr=l.listIterator();
+		while (ltr.hasNext()) {
+			Object obj= ltr.next();
+			System.out.println(obj);
+		}
+	}
+}
