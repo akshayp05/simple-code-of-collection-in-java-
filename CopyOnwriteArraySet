@@ -1,0 +1,28 @@
+import java.util.Iterator;
+import java.util.concurrent.CopyOnWriteArraySet;
+
+public class CopyOnArraySetDemo {
+public static void main(String[] args) {
+	CopyOnWriteArraySet set=new CopyOnWriteArraySet();
+	System.out.println("initial size of set:"+set.size());
+	int arr []= {10,20,30,40,50,60};
+	 for(int i = 0; i < 5; i++) {
+         set.add(arr[i]);
+      }
+      System.out.println("Size of set after additions: " + set.size());
+       System.out.println("Contents of set: " + set);
+       set.remove(10);
+      System.out.println("Size of set after deletion: " + set.size());
+      System.out.println("Contents of set: " + set);
+
+      try {
+         Iterator<Integer> itr = set.iterator();
+         while(itr.hasNext()) {
+            itr.remove();
+         }
+      }catch(Exception e) {
+         System.out.println("Method not supported:");
+      }
+      System.out.println("Size of set: " + set.size());
+   }
+}
