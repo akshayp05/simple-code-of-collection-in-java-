@@ -1,0 +1,13 @@
+import java.util.LinkedHashMap;
+
+    public class LinkedHashmapDemo {
+	public static void main(String[] args) {
+		LinkedHashMap<Integer, String> lm=new LinkedHashMap<Integer, String>();
+		lm.put(10, "mango");
+		lm.put(12, "apple");
+		lm.put(13, "banana");
+ System.out.println("key is:"+lm.keySet());
+ System.out.println("value is:"+lm.values());
+ System.out.println("Key-Value pairs:"+lm.entrySet());
+		}
+		}
