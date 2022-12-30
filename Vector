@@ -1,0 +1,26 @@
+import java.util.Enumeration;
+import java.util.Vector;
+
+public class EnumarationDemo {
+  public static void main(String[] args) {
+	Vector v=new Vector<>();
+	
+	v.add(2);
+	v.add("king");
+	v.add("khan");
+	v.add(1);
+	v.add(3);
+	v.add(4);
+	System.out.println(v);
+	System.out.println(v.contains("king"));
+	System.out.println(v.firstElement());
+	System.out.println(v.get(2));
+    System.out.println(v.size());
+	
+	Enumeration	enu=v.elements();
+	while (enu.hasMoreElements()) {
+		Object obj = enu.nextElement();
+		System.out.println(obj);
+	}
+}
+}
