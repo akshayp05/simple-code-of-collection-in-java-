@@ -1,0 +1,61 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+public class HashMapDemo {
+	public static void main(String[] args) {
+		HashMap<Integer,String> hm=new HashMap<Integer,String>();
+		hm.put(1, "one");
+		hm.put(2, "two");
+		hm.put(3, "three");
+		hm.put(4, "four");
+	for (Map.Entry<Integer,String> m : hm.entrySet()) {
+	System.out.println(m.getKey()+" : "+m.getValue());
+	
+	HashMap<Integer,String> hm1=new HashMap<Integer,String>();
+	hm1.put(11, "vikey");
+	hm1.put(12, "golu");
+	hm1.put(13, "sani");
+	hm1.put(14, "Raj");
+	Iterator<Integer> itr=hm1.keySet().iterator();
+	while (itr.hasNext()) {
+		Integer i = itr.next();
+		System.out.println("RollNo:"+i +"   name:"+hm1.get(i));
+		}}
+	}}
+  ===============================================================================================================================
+  
+  import java.util.HashMap;
+import java.util.Map;
+
+class Wether{
+	int temp;
+	String state;
+	public Wether(int temp,String state) {
+		this.temp=temp;
+		this.state=state;
+		}
+	}
+public class Test {
+  public static void main(String[] args) {
+	Map<Integer, String> mp=new HashMap<Integer, String>();
+	mp.put(36, "maharastra");
+	mp.put(25, "up");
+	mp.put(40, "Rajstan");
+	mp.put(28, "kerala");
+	for (Map.Entry<Integer, String> m1 : mp.entrySet()) {
+		System.out.println("Temprature: "+ m1.getKey() + "  "+"name of state: "+m1.getValue());
+		
+	}
+	System.out.println("Add  new state.......");
+	mp.put(33, "karnatak");
+	for (Map.Entry<Integer, String> m1 : mp.entrySet()) {
+		System.out.println("Temprature: "+ m1.getKey() + "  "+"name of state: "+m1.getValue());
+		
+	}
+	System.out.println("Replace state..............");
+	mp.replace(28, "tamil");
+	for (Map.Entry<Integer, String> m1 : mp.entrySet()) {
+		System.out.println("Temprature: "+ m1.getKey() + "  "+"name of state: "+m1.getValue());
+		}
+	}}
